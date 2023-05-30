@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html :class="{ 'dark': dark }" x-data="data()" lang="pt-br">
+<head>
+    {% include '../partials/head.html' %}
+</head>
+<body>
+    <div
+    class="flex h-screen bg-gray-50 dark:bg-gray-900"
+    :class="{ 'overflow-hidden': isSideMenuOpen }"
+    >
+        {% include '../partials/aside_mobile.html' %}
+        {% include '../partials/aside.html' %}
+        <div class="flex flex-col flex-1 w-full">
+            {% include '../partials/header.html' %}
+            {% include '../partials/main.html' %}
+        </div>
+    </div>    
+</body>
+</html>
